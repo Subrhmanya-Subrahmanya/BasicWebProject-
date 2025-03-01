@@ -1,0 +1,56 @@
+
+* {
+font-family: "Poppins", sans-serif;
+margin: 0px;
+box-sizing: border-box;
+
+}
+h1 {
+  text-align: center;
+}
+.navbar ul {
+list-style-type: none;
+background-color: rgb(179, 169, 169);
+overflow: hidden;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a:hover {
+  background-color: rgb(152, 201, 244);
+}
+main {
+  margin: 20px;
+}
+
+ .container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: aqua;
+  height: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container :nth-child(1) {
+
+}
+
+
+
+ /* css selectoors
+1. id selector - #navbr
+2. class selector - .navbar
+3. univerasal selector - *
+4. element selector - h1
+5. psedu selector */
