@@ -1,2 +1,9 @@
-<app-instrument-buttons></app-instrument-buttons>
-<app-instrument-details></app-instrument-details>
+<app-instrument-buttons
+ (instrumentSelected)="onInstrumentSelected($event)">
+  
+</app-instrument-buttons>
+<app-instrument-details
+[instrument]="selectedInstrument"
+>
+
+</app-instrument-details>

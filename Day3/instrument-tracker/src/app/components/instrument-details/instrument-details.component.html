@@ -1,3 +1,11 @@
-<div class="details-container">
-<h2 style="text-align: center;">Instrument Details</h2>
+<div class="instrument-container">
+  <div *ngIf="instrument" class="instrument-details">
+    <h2 style="text-align: center;">Instrument Details</h2>
+    <p><strong>id:</strong>{{instrument.id}}</p>
+    <p><strong>Serial Number:</strong>{{instrument.serialNumber}}</p>
+    <p><strong>Serial Number:</strong>{{instrument.serialNumber}}</p>
+    <p><strong>Checksum:</strong>{{instrument.checksum}}</p>
+    <p><strong>Device Family:</strong>{{instrument.famiy}}</p>
+  </div>
 </div>
+

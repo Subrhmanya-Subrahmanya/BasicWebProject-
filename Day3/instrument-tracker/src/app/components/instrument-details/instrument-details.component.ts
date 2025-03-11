@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-instrument-details',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './instrument-details.component.html',
   styleUrl: './instrument-details.component.css'
 })
 export class InstrumentDetailsComponent {
+  @Input() instrument: any;
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { InstrumentService } from '../../services/instrument.service';
 
 @Component({
@@ -9,14 +9,14 @@ import { InstrumentService } from '../../services/instrument.service';
   styleUrl: './instrument-buttons.component.css'
 })
 export class InstrumentButtonsComponent {
+  @Output() instrumentSelected = new EventEmitter<string>();
 
   constructor(private instrumentService: InstrumentService) {
     
   }
 
   selectInstrument(id: string) {
-    const result = this.instrumentService.getInstrumentById(id);
-    console.log(result);
+    this.instrumentSelected.emit(id);
     
   }
 
