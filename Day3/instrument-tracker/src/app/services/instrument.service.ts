@@ -13,19 +13,22 @@ export class InstrumentService {
       id: 'instrument1',
       serialNumber: 'SN123',
       checksum: '98858585',
-      famiy: 'fp200'
+      famiy: 'FP200',
+      details: 'The instrument monitors the power (SN123-FP200)'
     },
     {
       id: 'instrument2',
       serialNumber: 'SN124',
       checksum: '988585834',
-      famiy: 'fk200'
+      famiy: 'FK200',
+      details: 'The instrument monitors the thrust (SN124-FK200)'
     },
     {
       id: 'instrument3',
       serialNumber: 'SN126',
       checksum: '988585675',
-      famiy: 'fp500'
+      famiy: 'FP500',
+      details: 'The instrument details are dummy (SN126-FP500)'
     }
 
   ]

@@ -31,3 +31,10 @@ p strong {
 h2 {
   color: #fff;
 }
+textarea {
+  max-width: 400px;
+  max-height: 180px;
+  min-width: 400px;
+  min-height: 180px;
+  resize: both;
+}
