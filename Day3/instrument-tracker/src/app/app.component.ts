@@ -14,10 +14,19 @@ import { InstrumentService } from './services/instrument.service';
 export class AppComponent {
   title = 'instrument-tracker';
   selectedInstrument: any;
+  instruments: any[] = []
   
   constructor(private instrumentService: InstrumentService) { }
+
+  ngOnInit() {
+    this.instrumentService.getInstruments().subscribe((data: any) => {
+      this.instruments = data;
+    })
+  }
   
   onInstrumentSelected(id: string) {
-    this.selectedInstrument = this.instrumentService.getInstrumentById(id);
+    this.selectedInstrument = this.instruments.find(instrument => {
+     return instrument.id === id;
+    })
   }
 }
