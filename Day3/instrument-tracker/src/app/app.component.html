@@ -1,9 +1,11 @@
-<app-instrument-buttons
- (instrumentSelected)="onInstrumentSelected($event)">
-  
-</app-instrument-buttons>
-<app-instrument-details
-[instrument]="selectedInstrument"
->
-
-</app-instrument-details>
+<div class="dashboard">
+  <app-instrument-buttons
+  (instrumentSelected)="onInstrumentSelected($event)">
+   
+ </app-instrument-buttons>
+ <app-instrument-details
+ [instrument]="selectedInstrument"
+ >
+ 
+ </app-instrument-details>
+</div>

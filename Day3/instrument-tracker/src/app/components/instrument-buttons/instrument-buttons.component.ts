@@ -10,12 +10,14 @@ import { InstrumentService } from '../../services/instrument.service';
 })
 export class InstrumentButtonsComponent {
   @Output() instrumentSelected = new EventEmitter<string>();
+  selectedInstrument: string | null = null;
 
   constructor(private instrumentService: InstrumentService) {
     
   }
 
   selectInstrument(id: string) {
+    this.selectedInstrument = id;
     this.instrumentSelected.emit(id);
     
   }

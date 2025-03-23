@@ -1,16 +1,37 @@
 <div class="instrument-container">
-  <div *ngIf="instrument" class="instrument-details">
-    <h2 style="text-align: center;">Instrument Details</h2>
-    <p><strong>id:</strong>{{instrument.id}}</p>
-    <p><strong>Serial Number:</strong>{{instrument.serialNumber}}</p>
-    <p><strong>Serial Number:</strong>{{instrument.serialNumber}}</p>
-    <p><strong>Checksum:</strong>{{instrument.checksum}}</p>
-    <p><strong>Device Family:</strong>{{instrument.famiy}}</p>
-    <p>
-      <textarea placeholder="Instrument details" disabled>
-        {{instrument.details}}
-      </textarea>
-    </p>
-  </div>
-</div>
+  <div *ngIf="instrument; else nodata">
+    <div class="instrument-details">
+      <h2 class="instrument-header">{{instrument.id}}</h2>
+      <p><strong>Serial Number:</strong>{{instrument.serialNumber}}</p>
+      <p><strong>Serial Number:</strong>{{instrument.serialNumber}}</p>
+      <p><strong>Checksum:</strong>{{instrument.checksum}}</p>
+    </div>
+    <div class="instrument-select-option">
+      <p>Select Command to send</p>
+      <div class="select-option-mat">
+        <mat-form-field>
+          <mat-label>Supported methods</mat-label>
+          <mat-select [(value)]="selectedCommand" panelClass="custom-dropdown">
+            <cdk-virtual-scroll-viewport itemSize="2" class="virtual-scroll">
+              <mat-option *cdkVirtualFor="let command of instrument.supportedCommands" 
+                          [value]="command.value" 
+                          (onSelectionChange)="onCommandSelect($event, command.value, instrument.id)">
+                {{ command.viewValue }}
+              </mat-option>
+            </cdk-virtual-scroll-viewport>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
+    </div>
+    <div class="command-response-area">
+      <textarea rows="4" cols="50" [value]="commandResponse" placeholder="Response" readonly></textarea>
+    </div>
+  </div>
+  <ng-template #nodata>
+    <div class="nodata-preview">
+      Please select any instrument to see the details.
+    </div>
+    
+  </ng-template>
+</div>

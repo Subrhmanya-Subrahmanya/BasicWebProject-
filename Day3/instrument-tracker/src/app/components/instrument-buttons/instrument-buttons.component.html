@@ -1,11 +1,17 @@
+
+<div class="menu">
 <div class="btn-list">
 <button
 (click)="selectInstrument('instrument1')"
+[class.active]="selectedInstrument === 'instrument1'"
 >Instrument 1</button>
 <button
 (click)="selectInstrument('instrument2')"
+[class.active]="selectedInstrument === 'instrument2'"
 >Instrument 2</button>
 <button
 (click)="selectInstrument('instrument3')"
+[class.active]="selectedInstrument === 'instrument3'"
 >Instrument 3</button>
+</div>
 </div>

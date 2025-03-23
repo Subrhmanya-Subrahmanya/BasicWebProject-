@@ -1,8 +1,33 @@
-.btn-list{
-  background-color: aqua;
+.menu{
+  background-color: #bebebe;
+  height: 100%;
+  width: 10rem;
+  border-right: 2px solid rgb(4, 4, 68);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.btn-list {
+display: flex;
+flex-direction: column;
+gap: 20px;
+margin-top: 50px;
+
 }
 button {
-  margin: 5px;
+background-color: rgb(4, 4, 68);
+color: #ffffff;
   padding: 10px;
   font-size: 16px;
+  letter-spacing: 2px;
+
+}
+button:hover {
+  border-color: #888; /* Slight change on hover */
+}
+
+button.active {
+  border: 4px solid #847f07;
+   /* Highlight active button with blue */
 }

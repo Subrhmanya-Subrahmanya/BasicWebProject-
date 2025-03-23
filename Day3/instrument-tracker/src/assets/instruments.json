@@ -4,21 +4,25 @@
     "serialNumber": "SN123",
     "checksum": "98858585",
     "famiy": "FP200",
-    "details": "The instrument monitors the power (SN123-FP200)"
+    "details": "The instrument monitors the power (SN123-FP200)",
+    "supportedCommands": [{ "value": "Initialize", "viewValue": "initialize",
+    "commandResponse": "Initialization successful"}, {"value":"getConf","viewValue":"Get Configuration","commandResponse": "Configuration data: {...}"},{"value": "download", "viewValue":"Download Method","commandResponse": "Download started" }, {"value":"setRule", "viewValue":"Set Rule"}]
   },
   {
     "id": "instrument2",
     "serialNumber": "SN124",
     "checksum": "988585834",
     "famiy": "FK200",
-    "details": "The instrument monitors the thrust (SN124-FK200)"
+    "details": "The instrument monitors the thrust (SN124-FK200)",
+    "supportedCommands": [{ "value": "Initialize", "viewValue": "initialize"}, {"value":"getConf","viewValue":"Get Configuration"},{"value": "download", "viewValue":"Download Method"}]
   },
   {
     "id": "instrument3",
     "serialNumber": "SN126",
     "checksum": "988585675",
     "famiy": "FP500",
-    "details": "The instrument details are dummy (SN126-FP500)"
+    "details": "The instrument details are dummy (SN126-FP500)",
+    "supportedCommands": [{ "value": "Initialize", "viewValue": "initialize"}, {"value":"getConf","viewValue":"Get Configuration"},{"value": "download", "viewValue":"Download Method"}]
   }
 
 ]
