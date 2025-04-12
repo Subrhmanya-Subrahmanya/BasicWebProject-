@@ -1,6 +1,8 @@
 <div class="dashboard">
   <app-instrument-buttons
-  (instrumentSelected)="onInstrumentSelected($event)">
+  (instrumentSelected)="onInstrumentSelected($event)"
+  [instruments]="instruments"
+  >
    
  </app-instrument-buttons>
  <app-instrument-details

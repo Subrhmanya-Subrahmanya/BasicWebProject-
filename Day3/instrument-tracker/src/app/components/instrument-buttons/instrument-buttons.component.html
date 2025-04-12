@@ -1,7 +1,8 @@
 
 <div class="menu">
 <div class="btn-list">
-<button
+<!-- <button
+ 
 (click)="selectInstrument('instrument1')"
 [class.active]="selectedInstrument === 'instrument1'"
 >Instrument 1</button>
@@ -13,5 +14,24 @@
 (click)="selectInstrument('instrument3')"
 [class.active]="selectedInstrument === 'instrument3'"
 >Instrument 3</button>
+</div> -->
+<mat-form-field class="narrow-select">
+  <mat-label>Select an instrument</mat-label>
+  <mat-select [(value)]="selectedInstrument">
+    <mat-option [value]="null">None</mat-option>
+    <mat-option *ngFor="let instrument of instruments" [value]="instrument.id">
+      {{ instrument.id }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
 </div>
+<button
+class="open-btn"
+[ngStyle]="{
+  'pointer-events': !selectedInstrument ? 'none' : 'auto',
+  'opacity': !selectedInstrument ? 0.5 : 1
+}"
+(click)="selectInstrument(selectedInstrument)"
+>Open Details</button>
 </div>
